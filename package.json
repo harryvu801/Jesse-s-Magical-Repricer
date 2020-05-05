@@ -4,7 +4,8 @@
   "description": "",
   "main": "AmazonListings.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/main.js --s reprice > dist/bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,9 +17,11 @@
     "path": "^0.12.7"
   },
   "browserify": {
-    "transform": ["node-csvify"],
+    "transform": [
+      "node-csvify"
+    ],
     "transform-options": {
-        "node-csvify": "nojson"
+      "node-csvify": "nojson"
     }
-}
+  }
 }
